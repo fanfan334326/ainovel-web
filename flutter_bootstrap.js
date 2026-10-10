@@ -36,8 +36,17 @@ if (!window._flutter) {
 }
 _flutter.buildConfig = {"engineRevision":"035316565ad77281a75305515e4682e6c4c6f7ca","builds":[{"compileTarget":"dart2js","renderer":"canvaskit","mainJsPath":"main.dart.js"},{}],"useLocalCanvasKit":true};
 
+
 _flutter.loader.load({
-  serviceWorkerSettings: {
-    serviceWorkerVersion: "1677678092"
+  onEntrypointLoaded: async function(engineInitializer) {
+    try {
+      const appRunner = await engineInitializer.initializeEngine();
+      await appRunner.runApp();
+      document.getElementById('app-intro')?.remove();
+    } catch (error) {
+      const status = document.getElementById('loading-status');
+      if (status) status.textContent = '工作台加载失败，请刷新重试。';
+      console.error(error);
+    }
   }
 });

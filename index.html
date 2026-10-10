@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="/ainovel-web/">
-
   <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="AI 小说创作工作台">
-
-  <!-- iOS meta tags & icons -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="叙光是 AI 长篇小说创作工作台，支持角色与世界设定、分卷大纲、章节写作、续写润色、伏笔管理和一致性检查。自选 OpenAI 兼容模型，作品保存在本机。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="application-name" content="叙光">
+  <meta name="theme-color" content="#0D1020">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="叙光 Xuguang">
+  <meta property="og:title" content="叙光｜AI 小说创作工作台">
+  <meta property="og:description" content="从灵感、设定和大纲到章节写作，让长篇故事持续生长。自选 AI 模型，管理伏笔，检查前后设定。">
+  <meta property="og:image" content="icons/Icon-512.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="叙光：紫青色书页、笔尖与光芒标志">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="叙光｜AI 小说创作工作台">
+  <meta name="twitter:description" content="设定、大纲、章节、伏笔与一致性检查，一站式 AI 长篇小说创作。">
+  <meta name="twitter:image" content="icons/Icon-512.png">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="ainovel">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>AI 小说</title>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="叙光">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
   <link rel="manifest" href="manifest.json">
+  <title>叙光｜AI 小说创作工作台</title>
+  <!-- Deployment URL metadata is inserted by tool/configure_web_seo.py. -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"叙光","alternateName":"Xuguang","applicationCategory":"ProductivityApplication","operatingSystem":"Android, iOS, macOS, Windows, Linux, Web","inLanguage":"zh-CN","description":"AI 长篇小说创作工作台，支持设定、大纲、章节写作、伏笔管理与一致性检查。用户自选 OpenAI 兼容模型，作品保存在本机。","featureList":["角色与世界设定","分卷与章节大纲","AI 章节写作与续写润色","伏笔管理与一致性检查","TXT 导入与 TXT/Markdown 导出"]}</script>
+  <link rel="stylesheet" href="brand.css">
 </head>
 <body>
+  <main id="app-intro" class="intro">
+    <img src="icons/Icon-192.png" width="88" height="88" alt="叙光图标">
+    <p class="eyebrow">XUGUANG · AI WRITING STUDIO</p>
+    <h1>叙光｜AI 小说创作工作台</h1>
+    <p>从一个灵感，到一部长篇。管理角色与世界设定、分卷大纲、章节正文和伏笔，使用 AI 续写、润色与检查一致性。</p>
+    <p>自选 OpenAI 兼容模型，作品保存在本机；支持 TXT 导入与 TXT / Markdown 导出。</p>
+    <p id="loading-status" role="status">正在打开创作工作台…</p>
+    <a href="about.html">了解叙光的功能与使用方式</a>
+    <noscript><p>创作工作台需要启用 JavaScript。你仍可阅读产品介绍。</p></noscript>
+  </main>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
